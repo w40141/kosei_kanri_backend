@@ -13,6 +13,11 @@ func main() {
 			"message": "pong",
 		})
 	})
+	r.GET("/pong", func(c *gin.Context) {
+		c.JSON(http.StatusOK, gin.H{
+			"message": "ping",
+		})
+	})
 	// listen and serve on 0.0.0.0:8080 (for windows "localhost:8080")
 	r.Run()
 }
